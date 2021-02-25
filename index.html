@@ -7,7 +7,8 @@
 
     <body>
         
-        <canvas id="d"/>
+        <pre id="d" style="background-color:#fff; color:##808080; font-size: 10pt; height:25vh; width: 25vw; margin-top:25vh; margin-bottom:25vh; margin-right:25vw; margin-left:25vw;"></pre>
+        <canvas id="canvasdonut" style="display:none;"></canvas>
         
         <script>
             (function() {
@@ -102,17 +103,13 @@
               }
 
 
-              window.anim2 = function() {
-                if(tmr2 === undefined) {
-                  tmr2 = setInterval(canvasframe, 50);
-                } else {
-                  clearInterval(tmr2);
-                  tmr2 = undefined;
-                }
-              };
+              
+              
 
               asciiframe();
               canvasframe();
+              
+              anim1();
             }
 
             if(document.all)
